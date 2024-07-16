@@ -11,16 +11,18 @@
     </script>
     <script>
     window.onload = function() {
-        // Extract email from URL parameter
+        alert("Page loaded with JavaScript!");
         var userEmail = new URLSearchParams(window.location.search).get('email');
+        console.log("User Email:", userEmail);  // This will log the email to the console for debugging.
         var scriptTag = document.getElementById('phInc.helper');
         if (userEmail && scriptTag) {
-            scriptTag.setAttribute('data-user-id', userEmail); // Use email as the user identifier
+            scriptTag.setAttribute('data-user-id', userEmail);
         }
     };
     </script>
 </head>
 <body>
+    <p>Page loaded successfully!</p>
     <div data-oauth-ui="list_columns" 
          data-oauth-icon-size="Large" 
          data-oauth-button-color="#007BFF" 
