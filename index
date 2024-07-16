@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify OAuth Integration</title>
+    <script src="https://labs.pathfix.com/helper.js" 
+            data-user-id="END_USER_ID" 
+            id="phInc.helper" 
+            modules="pinc.oauth.min" 
+            data-public-key="YOUR_PUBLIC_KEY_FROM_PATHFIX">
+    </script>
+</head>
+<body>
+    <div data-oauth-ui="list_columns" 
+         data-oauth-icon-size="Large" 
+         data-oauth-button-color="#007BFF" 
+         data-oauth-ui-switches="statuson,disconnect">
+    </div>
+</body>
+</html>
