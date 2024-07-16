@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify OAuth Integration</title>
     <script src="https://labs.pathfix.com/helper.js" 
-            data-user-id="END_USER_ID" 
             id="phInc.helper" 
             modules="pinc.oauth.min" 
-            data-public-key="YOUR_PUBLIC_KEY_FROM_PATHFIX">
+            data-public-key="9870850A-32BA-4640-B81D-91CA15BC4AA7">
+    </script>
+    <script>
+    window.onload = function() {
+        // Extract user ID from URL parameter
+        var userId = new URLSearchParams(window.location.search).get('userid');
+        var scriptTag = document.getElementById('phInc.helper');
+        if (userId && scriptTag) {
+            scriptTag.setAttribute('data-user-id', userId);
+        }
+    };
     </script>
 </head>
 <body>
@@ -19,3 +28,4 @@
     </div>
 </body>
 </html>
+
