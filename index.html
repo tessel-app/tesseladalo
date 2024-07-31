@@ -1,32 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify OAuth Integration</title>
-    <script src="https://labs.pathfix.com/helper.js" 
-            id="phInc.helper" 
-            modules="pinc.oauth.min" 
-            data-public-key="9870850A-32BA-4640-B81D-91CA15BC4AA7">
-    </script>
-    <script>
-    window.onload = function() {
-        alert("Page loaded with JavaScript!");
-        var userEmail = new URLSearchParams(window.location.search).get('email');
-        console.log("User Email:", userEmail);  // This will log the email to the console for debugging.
-        var scriptTag = document.getElementById('phInc.helper');
-        if (userEmail && scriptTag) {
-            scriptTag.setAttribute('data-user-id', userEmail);
-        }
-    };
-    </script>
-</head>
-<body>
-    <p>Page loaded successfully!</p>
-    <div data-oauth-ui="list_columns" 
-         data-oauth-icon-size="Large" 
-         data-oauth-button-color="#007BFF" 
-         data-oauth-ui-switches="statuson,disconnect">
-    </div>
-</body>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>tessel x buildspace</title>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <style type="text/css">
+      html { margin: 0; height: 100%; overflow: hidden; }
+      iframe { position: absolute; top: 0; right: 0; bottom: 0; left: 0; border: 0; }
+    </style>
+  </head>
+  <body>
+    <iframe data-tally-src="https://tally.so/r/mO0pPM" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="tessel x buildspace"></iframe>
+  </body>
 </html>
